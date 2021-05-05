@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <title>The John Mayer Forum</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav main-navi">
+            <ul>
+                <li><a href="/">Forum</a></li>
+                <li><a href="/store.html">Store</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+        </nav>
+        <h1 class="john-mayer">The John Mayer Forum</h1>
+    </header>
+
+    <div class="container content-section">
+        <h2 class="mb-1">
+            <%= article.title %>
+        </h2>
+        <div class="text-fade mb-2">
+            <%= article.createdAt.toLocaleDateString() %>
+        </div>
+        <a href="/" class="button btn-back">Alle Artikler</a>
+        <a href="/articles/edit/<%= article.id %>" class="button btn-edit">Rediger</a>
+
+        <div>
+            <%= article.tekst %>
+        </div>
+    </div>
+    
+</body>
+
+</html>

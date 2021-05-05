@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <title>The John Mayer Forum</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav main-navi">
+            <ul>
+                <li><a href="/">Forum</a></li>
+                <li><a href="store.html">Butik</a></li>
+                <li><a href="about.html">Info</a></li>
+            </ul>
+        </nav>
+        <h1 class="john-mayer2">The John Mayer Forum</h1>
+    </header>
+
+    <div class="container">
+        <h1 class="margin-title">Forum Articles</h1>
+        <a href="/articles/new" class="button btn-success">Ny Artikel</a>
+
+        <% articles.forEach(article => { %>
+            <div class="card-margin">
+                <div class="card-krop">
+                    <h4 class="card-name"><%= article.title %></h4>
+                    <div class="card-date text-fade">
+                        <%= article.createdAt %>
+                    </div>
+                    <div class="card-tekst"><%= article.description %></div>
+                    <a href="articles/<%= article.id %>" class="button btn-read">Læs Mere</a>
+                    <a href="articles/edit/<%= article.id %>" class="button btn-edit">Rediger</a>
+                    <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+                    <button type="submit" class="button btn-danger">Slet</button>
+                    </form>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+    <footer class="main-footer mt-2">
+        <div class="container main-footer-container">
+            <h3 class="john-mayer john-mayer-small">The John Mayer Forum</h3>
+            <ul class="nav footer-nav">
+                <li>
+                    <a href="https://youtube.com" target="_blank">
+                        <img src="Images/YouTube Logo.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://spotify.com" target="_blank">
+                        <img src="Images/Spotify Logo.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="Images/Facebook Logo.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

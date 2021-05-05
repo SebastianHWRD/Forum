@@ -1,0 +1,17 @@
+<div class="form-group">
+    <label for="title">Titel</label>
+    <input required value="<%= article.title %>" type="text" name="title" id="title" class="form-control">
+</div>
+<div class="form-group">
+    <label for="description">Beskrivelse</label>
+    <textarea name="description" id="description" class="form-control"><%= article.description %></textarea>
+</div>
+<div class="form-group">
+    <label for="tekst">Tekst</label>
+    <textarea required name="tekst" id="tekst" class="form-control"><%= article.tekst %></textarea>
+</div>
+
+<div class="mt-2">
+<a href="/" class="button btn-back">Fortryd</a>
+<button type="submit" class="button btn-read">Gem</button>
+</div>
